@@ -1,7 +1,19 @@
 # pandas library
 # https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html
 import pandas as pd
-df = pd.read_csv('file_path', index_col=0, header=0)
+
+# csv file
+df = pd.read_csv('file_name.csv', index_col=0, header=0)
+
+# text file
+df = pd.read_csv('file_name.txt', delimiter='\t')
+
+# excel file
+df = pd.read_excel('file_name.xslx')
+
+
+
+
 
 # numpy library
 # https://numpy.org/doc/stable/reference/generated/numpy.genfromtxt.html
