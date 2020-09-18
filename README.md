@@ -1,22 +1,34 @@
-## pipeline template
+## Data Science Project Python Code Template
 
-# Goal
+## Goal
 The goal in this respository is to create a working template for any data science project using sklearn
 
-read data
+# Read Data
+explore various ways of importing data into pandas data frame or numpy n dimensional array
 
-separate X and y
+# Exploratory Data Analysis (EDA)
+use matplotlib and seaborn to visualize the data
 
-split data into train and test set
+use pandas to check basic data statistics
 
-numerical transformation (standardization, normalization etc.)
+# Separate X and y
 
-categorical transformation (one-hot-encoding)
+# Split data into train and test set
 
-build the machine learning model
+# Numerical transformation (standardization, normalization etc.)
 
-select the best model
+# Categorical transformation (one-hot-encoding)
 
-perform hyper-parameter tunning
+# Build the machine learning model: classification models, regression models
 
-save the model to local disk
+# Model evaluation
+Introduce various evaluation metrics/socres for different models
+
+# Select the best model
+
+
+# Perform hyper-parameter tunning
+Introduce various hyper-parameter tunning techniques for all kinds of models
+
+# Save the model to local disk
+Use pickle or joblib library to save model onto local disk and reload the model later from the saved file
