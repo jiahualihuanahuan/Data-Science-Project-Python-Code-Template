@@ -9,6 +9,7 @@ from numpy import genfromtxt
 my_data = genfromtxt('my_file.csv', delimiter=',')
 
 # csv library
+# https://docs.python.org/3/library/csv.html
 import csv
 with open('winequality-red.csv', 'r') as f:
     wines = list(csv.reader(f, delimiter=';'))
