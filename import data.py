@@ -11,8 +11,15 @@ df = pd.read_csv('file_name.txt', delimiter='\t')
 # excel file
 df = pd.read_excel('file_name.xslx')
 
+# use mlxtend library to load mnist dataset
+from mlxtend.data import loadlocal_mnist
+X, y = loadlocal_mnist(
+            images_path='/Users/jiahuali1991/Documents/GitHub/Data-Science-Project-Python-Code-Template/train-images-idx3-ubyte', 
+            labels_path='/Users/jiahuali1991/Documents/GitHub/Data-Science-Project-Python-Code-Template/train-labels-idx1-ubyte')
 
-
+X_test, y_test = loadlocal_mnist(
+            images_path='/Users/jiahuali1991/Documents/GitHub/Data-Science-Project-Python-Code-Template/t10k-images-idx3-ubyte', 
+            labels_path='/Users/jiahuali1991/Documents/GitHub/Data-Science-Project-Python-Code-Template/t10k-labels-idx1-ubyte')
 
 
 # numpy library
