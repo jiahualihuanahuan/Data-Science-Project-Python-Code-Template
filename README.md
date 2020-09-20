@@ -31,4 +31,4 @@ Introduce various evaluation metrics/socres for different models
 Introduce various hyper-parameter tunning techniques for all kinds of models
 
 ## Save the model to local disk
-Use pickle or joblib library to save model onto local disk and reload the model later from the saved file
+Use pickle and joblib library to save model onto local disk and reload the model later from the saved file
