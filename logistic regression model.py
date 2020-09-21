@@ -28,11 +28,11 @@ print('random search cross validation results saved')
 
 
 # use the best hyper parameters to build the model
-logistic_regression_clf = LogisticRegression(solver= 'sag', tol = 0.1778279410038923, C = 1000)
+lr_clf = LogisticRegression(lr_cv.best_estimator_)
 
 # Bundle preprocessing and modeling code in a pipeline
 my_pipeline = Pipeline(steps=[('preprocessor', preprocessor),
-                              ('clf', logistic_regression_clf)
+                              ('clf', lr_clf)
                              ])
 
 # Preprocessing of training data, fit model 

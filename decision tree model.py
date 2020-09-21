@@ -32,11 +32,11 @@ print('random search cross validation results saved')
 
 
 # use the best hyper parameters to build the model
-decision_tree_clf = DecisionTreeClassifier(criterion= 'gini', max_depth = 6, max_features = 19, min_samples_leaf = 10)
+tree_clf = DecisionTreeClassifier(tree_cv.best_estimator_)
 
 # Bundle preprocessing and modeling code in a pipeline
 my_pipeline = Pipeline(steps=[('preprocessor', preprocessor),
-                              ('clf', decision_tree_clf)
+                              ('clf', tree_clf)
                              ])
 
 # Preprocessing of training data, fit model 
