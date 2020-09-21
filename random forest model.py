@@ -35,7 +35,7 @@ results.to_csv('credit default random forest random search result.csv',index=Fal
 print('random search cross validation results saved')
 
 # use the best hyper parameters to build the model
-rf_clf = RandomForestClassifier(rf_cv.best_estimator_)
+rf_clf = rf_cv.best_estimator_
 
 # Bundle preprocessing and modeling code in a pipeline
 my_pipeline = Pipeline(steps=[('preprocessor', preprocessor),
