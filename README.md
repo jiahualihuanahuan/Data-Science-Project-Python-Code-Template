@@ -3,8 +3,8 @@
 # Goal
 The goal in this respository is to create a python code template for any data science project using [pandas](https://pandas.pydata.org/), [matplotlib](https://matplotlib.org/), [seaborn](https://seaborn.pydata.org/) and [sklearn](https://scikit-learn.org/stable/index.html).
 
-## Read Data
-Explore various ways of importing data from various formats into pandas DataFrame or numpy n dimensional array
+## [Read Data]()
+Explore various ways of [importing data](https://github.com/jiahualihuanahuan/Data-Science-Project-Python-Code-Template/blob/master/import%20data.py) from various formats into pandas DataFrame or numpy n dimensional array
 
 - .csv
 - .txt
