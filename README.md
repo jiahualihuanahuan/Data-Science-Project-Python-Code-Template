@@ -13,6 +13,23 @@ Explore various ways of importing data from various formats into pandas DataFram
 - .tar.gz
 
 ## Exploratory Data Analysis (EDA)
+
+### Why EDA?
+#### Reasons for the analyst
+- Identify patterns and develop hypotheses.
+- Test technical assumptions.
+- Inform model selection and feature engineering.
+- Build an intuition for the data.
+
+#### Reasons for consumer of analysis
+- Ensures delivery of technically-sound results.
+- Ensures right question is being asked.
+- Tests business assumptions.
+- Provides context necessary for maximum applicability and value of results.
+- Leads to insights that would otherwise not be found.
+
+Use [pandas](https://pandas.pydata.org/) and [numpy](https://numpy.org/) to perform data wrangling
+
 Use [matplotlib](https://matplotlib.org/) and [seaborn](https://seaborn.pydata.org/) to visualize the data
 
 - histogram
