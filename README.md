@@ -18,7 +18,8 @@ use pandas to check basic data statistics
 # Build transformation and machine learning pipeline 
 
 ## Numerical transformation (standardization, normalization etc.)
-
+use StandardScaler() and MinMaxScaler() in Sci-kit learn to standardize the data
+please check the [link](https://scikit-learn.org/stable/modules/preprocessing.html#standardization-or-mean-removal-and-variance-scaling) to explore more 
 ## Categorical transformation (one-hot-encoding)
 
 ## Build the machine learning model: classification models, regression models
