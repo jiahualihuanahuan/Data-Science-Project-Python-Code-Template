@@ -1,15 +1,29 @@
 # Data Science Project Python Code Template
 
 # Goal
-The goal in this respository is to create a working template for any data science project using sklearn
+The goal in this respository is to create a python code template for any data science project using [pandas](https://pandas.pydata.org/), [matplotlib](https://matplotlib.org/), [seaborn](https://seaborn.pydata.org/) and [sklearn](https://scikit-learn.org/stable/index.html).
 
 ## Read Data
-explore various ways of importing data into pandas data frame or numpy n dimensional array
+Explore various ways of importing data from various formats into pandas DataFrame or numpy n dimensional array
+
+- .csv
+- .txt
+- .excel
+- .json
+- .tar.gz
 
 ## Exploratory Data Analysis (EDA)
-use matplotlib and seaborn to visualize the data
+Use [matplotlib](https://matplotlib.org/) and [seaborn](https://seaborn.pydata.org/) to visualize the data
 
-use pandas to check basic data statistics
+- histogram
+- distribution plot
+- line plot
+- bar plot
+- boxplot
+- pie chart
+- pairwise plot
+
+Use pandas to check basic data statistics
 
 ## Separate X and y if needed
 
