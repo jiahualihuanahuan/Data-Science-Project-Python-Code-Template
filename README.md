@@ -12,7 +12,7 @@ Explore various ways of importing data from various formats into pandas DataFram
 - .json
 - .tar.gz
 
-## Exploratory Data Analysis (EDA)
+## [Exploratory Data Analysis (EDA)](https://github.com/cmawer/pycon-2017-eda-tutorial/blob/master/EDA-cheat-sheet.md)
 
 ### Why EDA?
 #### Reasons for the analyst
