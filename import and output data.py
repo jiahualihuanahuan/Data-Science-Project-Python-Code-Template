@@ -6,6 +6,7 @@
 # 1.1 pandas library
 import pandas as pd
 
+
 # csv file
 df = pd.read_csv('file_name.csv', index_col=0, header=0)
 
