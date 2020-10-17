@@ -6,7 +6,6 @@
 # 1.1 pandas library
 import pandas as pd
 
-
 # csv file
 df = pd.read_csv('file_name.csv', index_col=0, header=0)
 
@@ -21,9 +20,6 @@ tables = pd.read_html("http://www.basketball-reference.com/leagues/NBA_2016_game
 
 # json
 df = pd.read_json('file_name.json')
-
-
-
 
 #----------------------------------------
 # 1.2 numpy library
