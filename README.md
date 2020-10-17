@@ -11,9 +11,11 @@ use matplotlib and seaborn to visualize the data
 
 use pandas to check basic data statistics
 
-## Separate X and y
+## Separate X and y if needed
 
 ## Split data into train and test set
+
+# Build transformation and machine learning pipeline 
 
 ## Numerical transformation (standardization, normalization etc.)
 
@@ -32,3 +34,5 @@ Introduce various hyper-parameter tunning techniques for all kinds of models
 
 ## Save the model to local disk
 Use pickle and joblib library to save model onto local disk and reload the model later from the saved file
+
+## Reload the model in a latter date
