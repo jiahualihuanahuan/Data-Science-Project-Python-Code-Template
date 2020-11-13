@@ -8,7 +8,7 @@ from tensorflow.keras import layers
 # Define Sequential model with 3 layers
 model = keras.Sequential(
     [
-        layers.Dense(2, activation="relu", name="layer1" ''', input_shape=(4,)'''),
+        layers.Dense(2, activation="relu", name="layer1"),
         layers.Dense(3, activation="relu", name="layer2"),
         layers.Dense(4, name="layer3"),
     ]
@@ -19,22 +19,42 @@ y = model(x)
 
 model.summary()
 #---------------------------------------
+# Define Sequential model with 3 layers with Input shape specified
+model = keras.Sequential(
+    [
+		keras.Input(shape=(3,3))
+        layers.Dense(2, activation="relu", name="layer1"),
+        layers.Dense(3, activation="relu", name="layer2"),
+        layers.Dense(4, name="layer3"),
+    ]
+)
+
+model.summary()
+#---------------------------------------
 # 2 use add(...)
+# Define Sequential model with 3 layers
 model = keras.Sequential()
-#model.add(keras.Input(shape=(3,3)))
 model.add(keras.layers.Dense(32, activation='relu', name='layer 4'))
 model.add(keras.layers.Dense(16, activation='relu', name='layer 5'))
 model.add(keras.layers.Dense(8, activation='relu', name='layer 6'))
-model.summary()
 
 # Call model on a test input
 x = tf.ones((3, 3))
 y = model(x)
-
+model.summary()
+#---------------------------------------
+# Define Sequential model with 3 layers with Input shape specified
+model = keras.Sequential()
+model.add(keras.Input(shape=(3,3)))
+model.add(keras.layers.Dense(32, activation='relu', name='layer 4'))
+model.add(keras.layers.Dense(16, activation='relu', name='layer 5'))
+model.add(keras.layers.Dense(8, activation='relu', name='layer 6'))
+model.summary()
+#---------------------------------------
 # access layers
 model.layers
 len(model.layers)
-
+#---------------------------------------
 # Use pop() method to remove layers
 model.pop()
 len(model.layers)
@@ -42,7 +62,6 @@ model.summary()
 
 #---------------------------------------
 # 3 Nested layers
-
 # Create 3 layers
 layer1 = layers.Dense(2, activation="relu", name="layer1")
 layer2 = layers.Dense(3, activation="relu", name="layer2")
