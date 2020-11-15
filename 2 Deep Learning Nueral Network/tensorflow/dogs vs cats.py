@@ -157,6 +157,21 @@ for data_batch, labels_batch in train_generator:
     print('labels batch shape:', labels_batch.shape)
     break
 
+# Callbacks
+from keras.callbacks import ModelCheckpoint, EarlyStopping
+checkpoint = ModelCheckpoint("vgg16_1.h5", 
+                             monitor='val_acc', 
+                             verbose=1, 
+                             save_best_only=True, 
+                             save_weights_only=False, 
+                             mode='auto', 
+                             period=1)
+early = EarlyStopping(monitor='val_acc', 
+                      min_delta=0, 
+                      patience=5, 
+                      verbose=1, 
+                      mode='auto')
+
 # fit/train model
 history = VGG_16.fit_generator(
       train_generator,
