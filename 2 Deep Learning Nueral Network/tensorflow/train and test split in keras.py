@@ -1,8 +1,16 @@
 # Image data preprocessing
+# Use this code to generate train/validate generator from the same folder
 
-image_size = (224,224)
+# import library
+from keras.preprocessing.image import ImageDataGenerator
+
+# set parameters
+image_size = (112,112)
 
 batch_size = 32
+
+
+class_mode = 'binary' # for multi-class classification problem, use: class_mode = 'category' 
 
 train_datagen = ImageDataGenerator(
     rescale=1./255,
@@ -16,17 +24,17 @@ train_datagen = ImageDataGenerator(
     ) 
 
 train_generator = train_datagen.flow_from_directory(
-    train_data_dir,
+    train_data_directory,
     target_size=image_size,
     batch_size=batch_size,
-    class_mode='binary', # for multi-class classification problem, use 'category'
+    class_mode=class_mode, # for multi-class classification problem, use 'category'
     subset='training') # set as training data
 
 validation_generator = train_datagen.flow_from_directory(
-    train_data_dir, # same directory as training data
+    train_data_directory, # same directory as training data
     target_size=image_size,
     batch_size=batch_size,
-    class_mode='binary', # for multi-class classification problem, use 'category'
+    class_mode=class_mode, # for multi-class classification problem, use 'category'
     subset='validation') # set as validation data
 
 model.fit_generator(

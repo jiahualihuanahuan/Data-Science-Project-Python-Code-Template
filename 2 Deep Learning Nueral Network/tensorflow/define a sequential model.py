@@ -22,7 +22,7 @@ model.summary()
 # Define Sequential model with 3 layers with Input shape specified
 model = keras.Sequential(
     [
-		keras.Input(shape=(3,3))
+        keras.Input(shape=(3, 3))
         layers.Dense(2, activation="relu", name="layer1"),
         layers.Dense(3, activation="relu", name="layer2"),
         layers.Dense(4, name="layer3"),
@@ -45,11 +45,21 @@ model.summary()
 #---------------------------------------
 # Define Sequential model with 3 layers with Input shape specified
 model = keras.Sequential()
-model.add(keras.Input(shape=(3,3)))
+model.add(keras.Input(shape=(3, 3)))
 model.add(keras.layers.Dense(32, activation='relu', name='layer 4'))
 model.add(keras.layers.Dense(16, activation='relu', name='layer 5'))
 model.add(keras.layers.Dense(8, activation='relu', name='layer 6'))
 model.summary()
+
+#---------------------------------------
+# Define Sequential model with 3 layers with Input shape specified
+model = keras.Sequential()
+model.add(keras.layers.Dense(32, activation='relu',
+                             input_shape=(3, 3), name='layer 4'))
+model.add(keras.layers.Dense(16, activation='relu', name='layer 5'))
+model.add(keras.layers.Dense(8, activation='relu', name='layer 6'))
+model.summary()
+
 #---------------------------------------
 # access layers
 model.layers
