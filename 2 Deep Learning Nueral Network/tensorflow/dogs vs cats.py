@@ -59,28 +59,28 @@ for fname in fnames:
     src = os.path.join(original_dataset_dir, fname)
     dst = os.path.join(validation_cats_dir, fname)
     shutil.copyfile(src, dst)
-    
+
 # Copy next 500 cat images to test_cats_dir
 fnames = ['cat.{}.jpg'.format(i) for i in range(9375, 12500)]
 for fname in fnames:
     src = os.path.join(original_dataset_dir, fname)
     dst = os.path.join(test_cats_dir, fname)
     shutil.copyfile(src, dst)
-    
+
 # Copy first 1000 dog images to train_dogs_dir
 fnames = ['dog.{}.jpg'.format(i) for i in range(6250)]
 for fname in fnames:
     src = os.path.join(original_dataset_dir, fname)
     dst = os.path.join(train_dogs_dir, fname)
     shutil.copyfile(src, dst)
-    
+
 # Copy next 500 dog images to validation_dogs_dir
 fnames = ['dog.{}.jpg'.format(i) for i in range(6250, 9375)]
 for fname in fnames:
     src = os.path.join(original_dataset_dir, fname)
     dst = os.path.join(validation_dogs_dir, fname)
     shutil.copyfile(src, dst)
-    
+
 # Copy next 500 dog images to test_dogs_dir
 fnames = ['dog.{}.jpg'.format(i) for i in range(9375, 12500)]
 for fname in fnames:
@@ -118,7 +118,7 @@ VGG_16.add(MaxPool2D(pool_size=(2,2),strides=(2,2)))
 VGG_16.add(Flatten())
 VGG_16.add(Dense(4096,activation="relu"))
 VGG_16.add(Dense(4096,activation="relu"))
-VGG_16.add(Dense(1, activation="softmax"))
+VGG_16.add(Dense(1, activation="sigmoid"))
 
 VGG_16.summary()
 
@@ -159,17 +159,17 @@ for data_batch, labels_batch in train_generator:
 
 # Callbacks
 from keras.callbacks import ModelCheckpoint, EarlyStopping
-checkpoint = ModelCheckpoint("vgg16_1.h5", 
-                             monitor='val_acc', 
-                             verbose=1, 
-                             save_best_only=True, 
-                             save_weights_only=False, 
-                             mode='auto', 
+checkpoint = ModelCheckpoint("vgg16_1.h5",
+                             monitor='val_acc',
+                             verbose=1,
+                             save_best_only=True,
+                             save_weights_only=False,
+                             mode='auto',
                              period=1)
-early = EarlyStopping(monitor='val_acc', 
-                      min_delta=0, 
-                      patience=5, 
-                      verbose=1, 
+early_stopping = EarlyStopping(monitor='val_acc',
+                      min_delta=0,
+                      patience=5,
+                      verbose=1,
                       mode='auto')
 
 # fit/train model
