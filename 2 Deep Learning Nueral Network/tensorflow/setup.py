@@ -3,6 +3,6 @@ import keras
 
 #-------------------------------------
 # Using plaidml.keras.backend backend
-import os, shutil
+import os
 os.environ["KERAS_BACKEND"] = "plaidml.keras.backend"
 import keras
