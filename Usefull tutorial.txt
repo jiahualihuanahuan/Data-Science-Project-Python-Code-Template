@@ -1,4 +1,0 @@
-Usefull tutorial
-
-https://www.kaggle.com/pavansanagapati/6-useful-automated-ml-tools-for-data-scientists
-
